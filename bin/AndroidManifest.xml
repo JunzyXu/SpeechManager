@@ -34,6 +34,14 @@
             android:name="com.example.tablayout.DetailedGradeActivity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name="com.example.tablayout.DetailedApplyActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.tablayout.ApplyNewSpeech"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>

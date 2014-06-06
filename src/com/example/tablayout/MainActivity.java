@@ -26,7 +26,7 @@ public class MainActivity extends TabActivity {
 		// Initialize a TabSpec for each tab and add it to the TabHost
 		spec = tabHost
 				.newTabSpec("Grade")
-				.setIndicator("Grade",
+				.setIndicator("GRADE",
 						res.getDrawable(R.drawable.ic_tab_artists))
 				.setContent(intent);
 		tabHost.addTab(spec);
@@ -34,10 +34,10 @@ public class MainActivity extends TabActivity {
 		// Do the same for the other tabs
 		intent = new Intent().setClass(this, ApplyActivity.class);
 		spec = tabHost.newTabSpec("Apply")
-				.setIndicator("Apply", res.getDrawable(R.drawable.a1))
+				.setIndicator("APPLY", res.getDrawable(R.drawable.a1))
 				.setContent(intent);
 		tabHost.addTab(spec);
-
+   
 		tabHost.setCurrentTab(1);
 	}
 

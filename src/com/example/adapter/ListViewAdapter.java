@@ -11,21 +11,23 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.model.Speech;
+import com.example.model.GradeSpeech;
 import com.example.tablayout.R;
 
 public class ListViewAdapter extends BaseAdapter {
 
 	private Context context;
-	private List<Speech> speechList;
+	private List<GradeSpeech> speechList;
 	private LayoutInflater inflater;
+	private int[] speechPicture = { R.drawable.speech, R.drawable.speech2,
+			R.drawable.speech3, R.drawable.speech4 };
 
 	public ListViewAdapter(Context context) {
 		this.context = context;
 		this.inflater = LayoutInflater.from(context);
 	}
 
-	public ListViewAdapter(Context context, List<Speech> speechList) {
+	public ListViewAdapter(Context context, List<GradeSpeech> speechList) {
 		this.context = context;
 		this.speechList = speechList;
 		this.inflater = LayoutInflater.from(context);
@@ -59,7 +61,8 @@ public class ListViewAdapter extends BaseAdapter {
 			listItem.gradeTV = (TextView) view.findViewById(R.id.grade);
 			listItem.groupLeaderTV = (TextView) view
 					.findViewById(R.id.grouperLeader);
-			listItem.groupLogo = (ImageView) view.findViewById(R.id.groupLogo);
+			listItem.groupLogo = (ImageView) view
+					.findViewById(R.id.list_item_groupLogo);
 			listItem.titleTV = (TextView) view.findViewById(R.id.title);
 			view.setTag(listItem);
 
@@ -67,18 +70,17 @@ public class ListViewAdapter extends BaseAdapter {
 			listItem = (ListItem) view.getTag();
 		}
 
-		
 		listItem.titleTV.setText(speechList.get(position).getTitle());
-		
-		if (speechList.get(position).getGroupMumber() != null
-				&& speechList.get(position).getGroupMumber().size() != 0) {
-			listItem.groupLeaderTV.setText(speechList.get(position)
-					.getGroupMumber().get(0));
-		} else {
-			listItem.groupLeaderTV.setText("has not leader");
-		}
-		listItem.gradeTV.setText( String.valueOf(speechList.get(position).getGrade()));
-		
+
+		listItem.groupLeaderTV.setText(speechList.get(position)
+				.getGroupLeader());
+
+		listItem.gradeTV.setText(String.valueOf(speechList.get(position)
+				.getGrade()));
+
+		listItem.groupLogo.setBackgroundDrawable(context.getResources()
+				.getDrawable(speechPicture[position % 4]));
+
 		return view;
 	}
 

@@ -13,12 +13,12 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.example.adapter.ListViewAdapter;
-import com.example.model.Speech;
+import com.example.model.GradeSpeech;
 
 public class GradeActivity extends Activity {
 	private ListView speechLV;
 	private Context context;
-	private List<Speech> speechList;
+	private List<GradeSpeech> speechList;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -29,11 +29,11 @@ public class GradeActivity extends Activity {
 
 	private void init() {
 		context = this;
-		speechList = new ArrayList<Speech>();
+		speechList = new ArrayList<GradeSpeech>();
 
 		for (int i = 0; i < 10; i++) {
-			Speech speech = new Speech("speech_" + i, null, "hello world",
-					80 + i);
+			GradeSpeech speech = new GradeSpeech(i ,"speech_" + i, null, "hello world",
+					80 + i,"非常好" , "2014-06-0" + i ,"http://pml//se203");
 			speechList.add(speech);
 		}
 

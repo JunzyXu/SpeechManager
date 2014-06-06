@@ -4,10 +4,29 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <ListView
-        android:id="@+id/applySpeechLV"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/applyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:background="@drawable/apply_button"
+            android:text="申请演讲" >
+        </Button>
+
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/applyButton"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp" >
+        </ExpandableListView>
+    </RelativeLayout>
 
 </LinearLayout>

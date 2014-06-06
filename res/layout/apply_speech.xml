@@ -7,20 +7,19 @@
     android:orientation="vertical" >
 
     <LinearLayout
-        android:id="@+id/detailed_speech_linearLayout"
+        android:id="@+id/apply_speech_linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp" >
 
         <ImageView
-            android:id="@+id/detailed_speech_groupLogo"
+            android:id="@+id/apply_speech_groupLoGo"
             android:layout_width="80dip"
             android:layout_height="80dip"
             android:layout_gravity="center"
-            android:src="@drawable/speech4" />
+            android:src="@drawable/group1" />
 
         <LinearLayout
-            android:id="@+id/detailed_speech_linearLayout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -40,14 +39,26 @@
                     android:textColor="#000000" />
 
                 <TextView
-                    android:id="@+id/detailed_speech_title"
+                    android:id="@+id/apply_speech_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:text="选择主题 "
                     android:textColor="#505050" />
 
- 
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/apply_speech_changeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:clickable="true"
+                        android:text="修改"
+                        android:textColor="#50a8e0" />
+                </RelativeLayout>
             </LinearLayout>
 
             <View
@@ -66,13 +77,16 @@
                     android:text="演讲组员"
                     android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/detailed_speech_groupLeader"
+                <EditText
+                    android:id="@+id/apply_speech_groupLeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="XXX"
-                    android:textColor="#505050" />
+                    android:layout_weight="1"
+                    android:background="@null" >
+
+                    <requestFocus />
+                </EditText>
             </LinearLayout>
 
             <View
@@ -91,23 +105,21 @@
                     android:text="演讲班级"
                     android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/detailed_speech_class"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="选择主题 "
-                    android:textColor="#505050" />
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:layout_weight="1" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/detailed_speech_contentLayout"
+        android:id="@+id/contentLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/detailed_speech_linearLayout"
-        android:layout_marginBottom="10dp"
+        android:layout_below="@id/apply_speech_linearLayout"
+        android:layout_marginBottom="34dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:orientation="vertical" >
@@ -120,8 +132,8 @@
             android:textColor="#000000"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/detailed_speech_content"
+        <EditText
+            android:id="@+id/apply_speech_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
@@ -132,119 +144,94 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/detailed_speech_teacherComment_layout"
+        android:id="@+id/lastLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/detailed_speech_contentLayout"
-        android:layout_marginBottom="20dp"
+        android:layout_below="@id/contentLayout"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:background="@drawable/input"
         android:orientation="vertical" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="0dp"
-            android:text="教师点评"
-            android:textColor="#000000"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/detailed_speech_teacherComment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:background="@drawable/input"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:minLines="3" />
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/detailed_speech_teacherComment_layout"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" >
-
-        <TextView
-            android:id="@+id/detailed_speech_grade"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/grade_view_border"
-            android:gravity="center"
-            android:text="100"
-            android:textColor="#FFFFFF"
-            android:textSize="45dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/detailed_speech_grade"
-            android:background="@drawable/input"
-            android:orientation="vertical" >
+            android:layout_margin="10dp" >
 
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp" >
+                android:text="申请时间"
+                android:textColor="#000000" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="申请时间"
-                    android:textColor="#000000" />
-
-                <TextView
-                    android:id="@+id/detailed_speech_date"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="2014-06-05" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dp"
-                android:background="@drawable/prefresh_list_cutline" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dp"
-                android:background="@drawable/prefresh_list_cutline" />
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/apply_speech_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp" >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="组员名单"
-                    android:textColor="#000000" />
-
-                <TextView
-                    android:id="@+id/detailed_speech_groupOtherMumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="XXX,XXX,XXX" />
-            </LinearLayout>
+                android:layout_marginLeft="20dp"
+                android:text="2014-06-05" />
         </LinearLayout>
-    </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/prefresh_list_cutline" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="演讲时长"
+                
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/apply_speech_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ems="10"
+                android:layout_marginLeft="20dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/prefresh_list_cutline" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="组员名单"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/apply_speech_groupOtherMumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ems="10"
+                android:layout_marginLeft="20dp" />
+        </LinearLayout>
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
+        android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/detailed_speech_downloader"
+            android:id="@+id/apply_speech_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -253,7 +240,7 @@
             android:layout_marginRight="0dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/button_downloader"
-            android:text="演讲PPT下载" />
+            android:text="申请" />
     </RelativeLayout>
 
 </RelativeLayout>
