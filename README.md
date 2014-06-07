@@ -1,4 +1,0 @@
-SpeechManager
-=============
-
-SpeechManager

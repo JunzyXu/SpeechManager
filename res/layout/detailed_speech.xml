@@ -44,10 +44,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="选择主题 "
+                    android:text="单项联系3 "
                     android:textColor="#505050" />
-
- 
             </LinearLayout>
 
             <View
@@ -71,7 +69,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="XXX"
+                    android:text="刘够换"
                     android:textColor="#505050" />
             </LinearLayout>
 
@@ -96,7 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="选择主题 "
+                    android:text="嵌软"
                     android:textColor="#505050" />
             </LinearLayout>
         </LinearLayout>
@@ -128,7 +126,8 @@
             android:background="@drawable/input"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:minLines="3" />
+            android:minLines="3" 
+            android:text = "单练习第四题做法"/>
     </LinearLayout>
 
     <LinearLayout
@@ -157,7 +156,9 @@
             android:background="@drawable/input"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:minLines="3" />
+            android:minLines="3"
+            android:text="这个结果基本可以接受。开发团队已能在此基础上展开讨论"
+             />
     </LinearLayout>
 
     <RelativeLayout
@@ -232,7 +233,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="XXX,XXX,XXX" />
+                    android:text="刘一毛,刘二毛" />
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>

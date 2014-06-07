@@ -44,7 +44,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="选择主题 "
+                    android:text="人月神话"
                     android:textColor="#505050" />
 
                 <RelativeLayout
@@ -83,7 +83,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="XXX"
+                    android:text="刘勾换"
                     android:textColor="#505050" />
             </LinearLayout>
 
@@ -108,7 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="选择主题 "
+                    android:text="嵌软 "
                     android:textColor="#505050" />
             </LinearLayout>
         </LinearLayout>
@@ -139,6 +139,7 @@
             android:layout_marginTop="0dp"
             android:background="@drawable/input"
             android:ems="10"
+            android:text="人月神话读后感"
             android:inputType="textMultiLine"
             android:minLines="3" />
     </LinearLayout>
@@ -216,7 +217,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="XXX,XXX,XXX" />
+                android:text="刘一毛，刘二毛" />
         </LinearLayout>
     </LinearLayout>
 
